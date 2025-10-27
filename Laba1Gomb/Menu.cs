@@ -115,8 +115,12 @@ namespace Laba1Gomb
                 }
 
                 Console.WriteLine("Доступные разрешения экрана:");
-                foreach (TypeOfScreenResolution TOSR in Enum.GetValues(typeof(TypeOfScreenResolution)))
-                    Console.WriteLine(TOSR);
+                System.Collections.IList listTOSR = Enum.GetValues(typeof(TypeOfScreenResolution));
+                for (int i = 0; i < listTOSR.Count; i++)
+                {
+                    TypeOfScreenResolution TOSR = (TypeOfScreenResolution)listTOSR[i];
+                    Console.WriteLine($"{i}) {TOSR}");
+                }
 
                 Console.Write("Введите разрешение экрана: ");
                 if (!Enum.TryParse(Console.ReadLine(), true, out TypeOfScreenResolution resolution))
@@ -128,7 +132,7 @@ namespace Laba1Gomb
                 Console.Write("Введите диагональ экрана (дюймы): ");
                 if (!byte.TryParse(Console.ReadLine(), out byte diagonal))
                 {
-                    Console.WriteLine("Ошибка: Некорректный формат диагонали");
+                    Console.WriteLine($"Ошибка: Некорректный формат диагонали.\nМинимальное значение: {byte.MinValue}\nМаксимальное значение: {byte.MaxValue}");
                     return;
                 }
 
@@ -164,8 +168,13 @@ namespace Laba1Gomb
                 string? model = Console.ReadLine();
 
                 Console.WriteLine("Доступные диапазоны работы: ");
-                foreach (TypeOfOperatingRanges TOOR in Enum.GetValues(typeof(TypeOfOperatingRanges)))
-                    Console.WriteLine(TOOR);
+                System.Collections.IList listTOOR = Enum.GetValues(typeof(TypeOfOperatingRanges));
+                for (int i = 0; i < listTOOR.Count; i++)
+                {
+                    TypeOfOperatingRanges TOOR = (TypeOfOperatingRanges)listTOOR[i];
+                    Console.WriteLine($"{i}) {TOOR}");
+                }
+
                 Console.Write("Введите диапазон работы: ");
                 string? rangeInput = Console.ReadLine();
 

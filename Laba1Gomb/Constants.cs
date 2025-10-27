@@ -15,7 +15,7 @@ namespace Laba1Gomb
 
         //значения по умолчанию для конструкторов
         static public string DefaultFirm = "Undefined";
-        static public float DefaultPrice = 1.0f;
+        static public decimal DefaultPrice = 1.0m;
 
         static public TypeOfScreenResolution DefaultScreenResolution = TypeOfScreenResolution.HD;
         static public byte DefaultScreenDiagonal = 1;

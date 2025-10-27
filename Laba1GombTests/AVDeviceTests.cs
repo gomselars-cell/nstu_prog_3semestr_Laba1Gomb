@@ -9,7 +9,7 @@ namespace Laba1GombTests
     public class AVDeviceTests
     {
         public const string ValidFirm = "Sony";
-        public const float ValidPrice = 499.99f;
+        public const decimal ValidPrice = 499.99m;
 
         // конструкторы
         [TestMethod]
@@ -66,13 +66,13 @@ namespace Laba1GombTests
         [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void PriceSetter_ZeroPrice_ShouldThrowArgumentOutOfRangeException()
         {
-            var device = new AVDevice(ValidFirm, 0.0f);
+            var device = new AVDevice(ValidFirm, 0.0m);
         }
 
         [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void PriceSetter_NegativePrice_ShouldThrowArgumentOutOfRangeException()
         {
-            var device = new AVDevice(ValidFirm, -1.0f);
+            var device = new AVDevice(ValidFirm, -1.0m);
         }
 
         public void PriceSetter_BigPrice_ShouldThrowArgumentOutOfRangeException()
@@ -83,7 +83,7 @@ namespace Laba1GombTests
         [TestMethod]
         public void PriceSetter_MaxPrice_Success()
         {
-            float MaxPrice = Constants.MAX_PRICE;
+            decimal MaxPrice = Constants.MAX_PRICE;
             var device = new AVDevice(ValidFirm, MaxPrice);
             Assert.AreEqual(MaxPrice, device.Price);
         }
