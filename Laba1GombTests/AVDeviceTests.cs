@@ -75,6 +75,11 @@ namespace Laba1GombTests
             var device = new AVDevice(ValidFirm, -1.0f);
         }
 
+        public void PriceSetter_BigPrice_ShouldThrowArgumentOutOfRangeException()
+        {
+            var device = new AVDevice(ValidFirm, Constants.MAX_PRICE + 1);
+        }
+
         [TestMethod]
         public void PriceSetter_MaxPrice_Success()
         {

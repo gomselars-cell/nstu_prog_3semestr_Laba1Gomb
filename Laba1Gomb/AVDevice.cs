@@ -43,9 +43,9 @@ namespace Laba1Gomb
             protected set
             {
                 if (value <= 0.0f)
-                    throw new ArgumentOutOfRangeException("Цена модели не может быть отрицательной или нулевой.");
+                    throw new ArgumentOutOfRangeException("Цена устройства не может быть отрицательной или нулевой.");
                 if (value > Constants.MAX_PRICE)
-                    throw new ArgumentOutOfRangeException($"Цена модели слишком большая. Максимальная цена: {Constants.MAX_PRICE}");
+                    throw new ArgumentOutOfRangeException($"Цена устройства слишком большая. Максимальная цена: {Constants.MAX_PRICE}");
                 price = value;
             }
         }

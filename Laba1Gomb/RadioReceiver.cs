@@ -34,9 +34,9 @@ namespace Laba1Gomb
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentNullException("Название модели не может быть пустым.");
+                    throw new ArgumentNullException("Название модели радиоприемника не может быть пустым.");
                 if (value.Length > Constants.MAX_LEN)
-                    throw new ArgumentOutOfRangeException($"Название модели слишком длинное. Максимальная длина: {Constants.MAX_LEN}");
+                    throw new ArgumentOutOfRangeException($"Название модели радиоприемника слишком длинное. Максимальная длина: {Constants.MAX_LEN}");
 
                 model = value;
             }
