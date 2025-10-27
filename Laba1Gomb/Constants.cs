@@ -10,7 +10,7 @@ namespace Laba1Gomb
     {
         //предельные значения
         static public int MAX_LEN = 20;
-        static public float MAX_PRICE = 100000000f;
+        static public decimal MAX_PRICE = 100000000;
         static public byte Max_ScreenDiagonal = byte.MaxValue;
 
         //значения по умолчанию для конструкторов

@@ -20,7 +20,7 @@ namespace Laba1Gomb
             ScreenResolution = Constants.DefaultScreenResolution;
             ScreenDiagonal = Constants.DefaultScreenDiagonal;
         }
-        public Television(string firm, float price, TypeOfScreenResolution screenResolution, byte screenDiagonal) :
+        public Television(string firm, decimal price, TypeOfScreenResolution screenResolution, byte screenDiagonal) :
             base(firm, price)
         {
             ScreenResolution = screenResolution;

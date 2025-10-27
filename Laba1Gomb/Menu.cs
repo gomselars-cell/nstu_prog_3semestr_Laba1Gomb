@@ -80,7 +80,7 @@ namespace Laba1Gomb
                 string? firm = Console.ReadLine();
 
                 Console.Write("Введите цену: ");
-                if (!float.TryParse(Console.ReadLine(), out float price))
+                if (!decimal.TryParse(Console.ReadLine(), out decimal price))
                 {
                     Console.WriteLine("Ошибка: Некорректный формат цены");
                     return;

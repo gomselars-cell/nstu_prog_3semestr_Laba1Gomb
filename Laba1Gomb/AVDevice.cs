@@ -10,7 +10,7 @@ namespace Laba1Gomb
     public class AVDevice
     {
         protected string firm;
-        protected float price;
+        protected decimal price;
 
         public AVDevice()
         {
@@ -18,7 +18,7 @@ namespace Laba1Gomb
             Price = Constants.DefaultPrice;
         }
 
-        public AVDevice(string firm, float price)
+        public AVDevice(string firm, decimal price)
         {
             Firm = firm;
             Price = price;
@@ -37,12 +37,12 @@ namespace Laba1Gomb
             }
         }
 
-        public float Price
+        public decimal Price
         {
             get => price;
             protected set
             {
-                if (value <= 0.0f)
+                if (value <= 0.0m)
                     throw new ArgumentOutOfRangeException("Цена устройства не может быть отрицательной или нулевой.");
                 if (value > Constants.MAX_PRICE)
                     throw new ArgumentOutOfRangeException($"Цена устройства слишком большая. Максимальная цена: {Constants.MAX_PRICE}");

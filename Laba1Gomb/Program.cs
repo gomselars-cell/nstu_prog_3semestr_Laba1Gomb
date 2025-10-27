@@ -10,6 +10,8 @@ namespace Laba1Gomb
     {
         public static void Main()
         {
+            float m = float.MaxValue;
+            Console.WriteLine(m);
             Menu menu = new Menu();
             menu.Run();
         }

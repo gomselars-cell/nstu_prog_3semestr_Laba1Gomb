@@ -21,7 +21,7 @@ namespace Laba1Gomb
             OperatingRanges = Constants.DefaultOperatingRanges;
         }
 
-        public RadioReceiver(string firm, float price, string model, TypeOfOperatingRanges operatingRanges) :
+        public RadioReceiver(string firm, decimal price, string model, TypeOfOperatingRanges operatingRanges) :
             base(firm, price)
         {
             Model = model;
